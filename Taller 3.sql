@@ -60,3 +60,18 @@ CREATE TABLE EMP_PROY
   )
   ENABLE 
 );
+
+-- RESTRICCIONES 
+alter table "SYSTEM"."PROYECTO" 
+  add constraint FKPROYECTO543752 
+    foreign key("RUT_JEFE") 
+      references "EMPLEADO"("RUT");
+
+alter table "SYSTEM"."EMP_PROY" 
+  add constraint FKEMP_PROY362421 
+    foreign key("RUT") 
+      references "EMPLEADO"("RUT");
+alter table "SYSTEM"."EMP_PROY" 
+  add constraint FKEMP_PROY902692 
+    foreign key("CODIGO") 
+      references "PROYECTO"("CODIGO");      

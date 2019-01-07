@@ -207,3 +207,15 @@ WHERE empleado.rut = proyecto.rut_jefe and proyecto.codigo = ( SELECT emp_proy.c
                                                                GROUP BY codigo
                                                                HAVING COUNT(*) > 5
                                                              ) 
+
+--Requerimiento 17
+
+INSERT INTO "SYSTEM"."EMPLEADO" (RUT, NOMBRE, F_DE_CONTRATACION, F_DE_NACIMIENTO, DIRECCION) VALUES ('1222222278', 'SAIKO',TO_DATE(sysdate,'YYYY/MM/DD:HH:MI:SSAM'), TO_DATE('1997-07-03', 'YYYY-MM-DD'), 'HAITI')
+
+
+--Requerimiento 18
+--ingresar rut igual
+INSERT INTO "SYSTEM"."EMPLEADO" (RUT, NOMBRE, F_DE_CONTRATACION, F_DE_NACIMIENTO, DIRECCION) VALUES ('1222222278', 'SAKO',TO_DATE(sysdate,'YYYY/MM/DD:HH:MI:SSAM'), TO_DATE('1997-07-03', 'YYYY-MM-DD'), 'colombia')
+-- RE:
+    Informe de error -
+    ORA-00001: restricción única (SYSTEM.EMPLEADO_PK) violada
